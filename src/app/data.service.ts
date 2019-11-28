@@ -10,27 +10,27 @@ export class DataService
   { }
   Select()
   {
-    return this.http.get("http://3.134.91.211:9898/emps");
+    return this.http.get("http://localhost/emps");
   }
 
   SelectByNo(No)
   {
-    return this.http.get("http://3.134.91.211:9898/emps/" +No);
+    return this.http.get("http://localhost/emps/" +No);
   }
 
 
   Delete(No)
   {
-    return this.http.delete("http://3.134.91.211:9898/emps/" +No);
+    return this.http.delete("http://localhost/emps/" +No);
   }
 
   Update(empobj)
   {
-    return this.http.put("http://3.134.91.211:9898/emps/" +empobj.No,empobj);
+    return this.http.put("http://localhost/emps/" +empobj.No,empobj);
   }
 
   Insert(empobj)
   {
-    return this.http.post("http://3.134.91.211:9898/emps",empobj);
+    return this.http.post("http://localhost/emps",empobj);
   }
 }
